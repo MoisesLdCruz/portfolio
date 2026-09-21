@@ -1094,6 +1094,17 @@
 <label class="font-label-caps text-[10px] text-on-surface-variant uppercase">Descrição da Ideia ou Problema a Resolver</label>
 <textarea name="message" class="w-full bg-surface-container text-on-surface font-body-sm p-space-sm rounded border border-outline-variant/30 outline-none focus:border-primary-container transition-colors" placeholder="Conte brevemente sobre sua necessidade, expectativas ou contexto do seu negócio..." required rows="4"></textarea>
 </div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20 space-y-space-sm">
+<p class="font-body-sm text-xs text-secondary leading-relaxed">
+Os dados enviados (nome, e-mail e mensagem) serão utilizados exclusivamente para responder à sua solicitação e não serão compartilhados com terceiros.
+</p>
+<label class="flex items-start gap-space-sm cursor-pointer group">
+<input type="checkbox" name="privacy" id="privacy-consent" required class="mt-1 w-4 h-4 rounded border-outline-variant/40 bg-surface-container text-primary-container focus:ring-primary-container focus:ring-offset-0 cursor-pointer"/>
+<span class="font-body-sm text-xs text-secondary group-hover:text-on-surface transition-colors">
+Li e concordo com a <a href="/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-container underline underline-offset-2">Política de Privacidade</a>. Autorizo o uso dos meus dados para contato comercial.
+</span>
+</label>
+</div>
 <button id="contact-submit-btn" class="w-full py-space-md bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-widest font-bold rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-space-sm shadow-lg" type="submit">
 <span id="contact-submit-text">[ ENVIAR PROPOSTA / INICIAR CONVERSA ]</span>
 <span class="material-symbols-outlined text-[18px]">send</span>
@@ -1121,6 +1132,7 @@
 <li><a class="hover:text-primary transition-colors" href="#filosofia">FILOSOFIA &amp; MÉTODO</a></li>
 <li><a class="hover:text-primary transition-colors" href="#sobre">SOBRE MOISÉS</a></li>
 <li><a class="hover:text-primary transition-colors" href="#livros">LIVROS &amp; ENSAIOS</a></li>
+<li><a class="hover:text-primary transition-colors" href="/politica-de-privacidade.html">PRIVACIDADE</a></li>
 </ul>
 </div>
 <div class="md:col-span-4 flex flex-col justify-between">
@@ -1143,6 +1155,8 @@
 <a class="hover:text-primary transition-colors" href="#studio">ESTUDIO DIGITAL</a>
 <span>•</span>
 <a class="hover:text-primary transition-colors" href="#contato">CONTATO</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="/politica-de-privacidade.html">PRIVACIDADE</a>
 </div>
 </div>
 </div>
@@ -1395,6 +1409,15 @@
         btn.disabled = true;
         btnText.textContent = '[ ENVIANDO... ]';
         btn.classList.add('opacity-70', 'cursor-not-allowed');
+
+        const privacyCheck = document.getElementById('privacy-consent');
+        if (!privacyCheck || !privacyCheck.checked) {
+          alert('Para enviar a mensagem, é necessário aceitar a Política de Privacidade.');
+          btn.disabled = false;
+          btnText.textContent = originalText;
+          btn.classList.remove('opacity-70', 'cursor-not-allowed');
+          return;
+        }
 
         const formData = new FormData(contactForm);
         const payload = {
