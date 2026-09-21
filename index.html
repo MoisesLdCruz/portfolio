@@ -5,5 +5,1429 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="web_standard" name="shell-type"/>
 <title>Moisés Cruz — Desenvolvedor · Criador · Autor (São Paulo, SP)</title>
-<!-- Conteúdo completo muito grande - o arquivo local está pronto para download -->
-</head><body><!-- PLACEHOLDER - use o arquivo baixado --></body></html>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-background": "#e5e2e1",
+            "primary-fixed-dim": "#ffb59e",
+            "on-primary-fixed-variant": "#852400",
+            "primary-fixed": "#ffdbd0",
+            "secondary-container": "#454746",
+            "secondary-fixed": "#e2e3e1",
+            "outline-variant": "#5c4037",
+            "on-tertiary-fixed": "#1b1c1c",
+            "on-secondary-fixed": "#1a1c1b",
+            "on-secondary-container": "#b5b5b4",
+            "surface-container-high": "#2a2a2a",
+            "tertiary-fixed": "#e3e2e2",
+            "on-tertiary-container": "#292a2a",
+            "on-tertiary": "#303031",
+            "on-error": "#690005",
+            "surface-variant": "#353534",
+            "on-primary-fixed": "#3a0b00",
+            "surface-container-low": "#1c1b1b",
+            "inverse-on-surface": "#313030",
+            "surface": "#131313",
+            "on-primary": "#5e1700",
+            "surface-container": "#201f1f",
+            "outline": "#ad897e",
+            "on-error-container": "#ffdad6",
+            "on-surface-variant": "#e6beb2",
+            "background": "#131313",
+            "on-secondary-fixed-variant": "#454746",
+            "surface-dim": "#131313",
+            "inverse-surface": "#e5e2e1",
+            "surface-container-highest": "#353534",
+            "error-container": "#93000a",
+            "surface-tint": "#ffb59e",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-bright": "#3a3939",
+            "tertiary-container": "#919191",
+            "on-secondary": "#2f3130",
+            "on-tertiary-fixed-variant": "#464747",
+            "primary-container": "#ff571a",
+            "secondary-fixed-dim": "#c6c7c5",
+            "error": "#ffb4ab",
+            "on-primary-container": "#521300",
+            "inverse-primary": "#ae3200",
+            "secondary": "#c6c7c5",
+            "primary": "#ffb59e",
+            "tertiary": "#c7c6c6",
+            "tertiary-fixed-dim": "#c7c6c6",
+            "on-surface": "#e5e2e1"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xl": "3rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem"
+          },
+          fontFamily: {
+            "headline-lg": ["Syne", "sans-serif"],
+            "headline-md": ["Syne", "sans-serif"],
+            "display-hero": ["Syne", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-caps": ["JetBrains Mono", "monospace"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "headline-sm": ["Syne", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "headline-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }],
+            "headline-md": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "display-hero": ["84px", { lineHeight: "88px", letterSpacing: "-0.04em", fontWeight: "800" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }],
+            "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.12em", fontWeight: "700" }],
+            "label-code": ["12px", { lineHeight: "18px", letterSpacing: "0.06em", fontWeight: "500" }],
+            "headline-sm": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "display-hero-mobile": ["46px", { lineHeight: "50px", letterSpacing: "-0.03em", fontWeight: "800" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+    }
+    ::-webkit-scrollbar { display: none; }
+    * { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    @media (min-width: 1024px) {
+      * { cursor: none !important; }
+    }
+    
+    #custom-cursor-dot {
+      pointer-events: none;
+      position: fixed;
+      width: 6px;
+      height: 6px;
+      background-color: #ff571a;
+      border-radius: 9999px;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s linear;
+    }
+    #custom-cursor-ring {
+      pointer-events: none;
+      position: fixed;
+      width: 32px;
+      height: 32px;
+      border: 1px solid rgba(229, 226, 225, 0.3);
+      border-radius: 9999px;
+      z-index: 9998;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.1s ease-out;
+    }
+    body.cursor-hover #custom-cursor-ring {
+      width: 52px;
+      height: 52px;
+      border-color: #ff571a;
+      background-color: rgba(255, 87, 26, 0.08);
+    }
+    body.cursor-hover #custom-cursor-dot {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Desktop Custom Pointer -->
+<div class="hidden lg:block" id="custom-cursor-dot"></div>
+<div class="hidden lg:block" id="custom-cursor-ring"></div>
+<!-- FULLSCREEN EDITORIAL MENU -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/98 backdrop-blur-2xl opacity-0 pointer-events-none transition-opacity duration-300 flex flex-col justify-between p-margin border border-outline-variant/20" id="editorial-fullscreen-menu">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 bg-primary-container inline-block"></span>
+<span class="font-label-caps text-label-caps tracking-widest text-on-surface uppercase">ÍNDICE DE NAVEGAÇÃO // SÃO PAULO</span>
+</div>
+<button class="font-label-code text-label-code uppercase tracking-wider text-on-surface hover:text-primary-container transition-colors" id="close-fullscreen-menu">[ FECHAR × ]</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter py-space-xl my-auto">
+<div class="md:col-span-8 flex flex-col gap-space-md">
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#o-que-faco">01. O QUE FAÇO</a>
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#projetos">02. PROJETOS DEMONSTRATIVOS</a>
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#filosofia">03. FILOSOFIA</a>
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#sobre">04. SOBRE MOISÉS</a>
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#livros">05. LIVROS &amp; ENSAIOS</a>
+<a class="font-display-hero text-headline-lg-mobile md:text-headline-lg text-on-surface hover:text-primary-container transition-colors tracking-tighter uppercase" href="#contato">06. CONTATO</a>
+</div>
+<div class="md:col-span-4 flex flex-col justify-between border-l border-outline-variant/30 pl-gutter">
+<div class="space-y-space-md">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">ESTÚDIO DE CRIAÇÃO</p>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+            Moisés Cruz transforma ideias de negócios em sites elegantes, sistemas funcionais e aplicativos móveis pragmáticos, atuando a partir de São Paulo para projetos em todo o Brasil.
+          </p>
+</div>
+<div class="space-y-space-sm pt-space-xl">
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">LOCALIZAÇÃO &amp; STATUS</p>
+<p class="font-label-code text-label-code text-primary">SÃO PAULO, SP — DISPONÍVEL PARA PROJETOS</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between border-t border-outline-variant/30 pt-space-md font-label-code text-label-code text-secondary">
+<p>© 2026 MOISÉS CRUZ — SÃO PAULO, BRASIL</p>
+<div class="flex gap-space-lg">
+<a class="hover:text-primary transition-colors" href="#sobre">BIO</a>
+<a class="hover:text-primary transition-colors" href="#studio">ESTUDIO DIGITAL</a>
+<a class="hover:text-primary transition-colors" href="#contato">INICIAR CONVERSA</a>
+</div>
+</div>
+</div>
+<!-- 1. HEADER & MENU -->
+<header class="fixed top-0 left-0 w-full z-40 bg-surface-container-lowest/85 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_1px_12px_rgba(0,0,0,0.25)]">
+<div class="h-20 w-full px-margin flex items-center justify-between">
+<!-- Marca à esquerda com badge discreto de São Paulo, SP -->
+<div class="flex items-center gap-space-md">
+<a class="group flex flex-col" href="#">
+<span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase group-hover:text-primary-container transition-colors">MOISÉS CRUZ</span>
+<span class="font-label-caps text-[10px] tracking-widest text-on-surface-variant uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            SÃO PAULO, SP
+          </span>
+</a>
+</div>
+<!-- Links de Navegação Direta -->
+<nav class="hidden lg:flex items-center gap-space-lg font-label-code text-label-code tracking-wider">
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#o-que-faco">O QUE FAÇO</a>
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#projetos">PROJETOS</a>
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#filosofia">FILOSOFIA</a>
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#sobre">SOBRE</a>
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#livros">LIVROS</a>
+<a class="text-secondary hover:text-on-surface transition-colors uppercase" href="#contato">CONTATO</a>
+</nav>
+<!-- Botão Menu Fullscreen & CTA -->
+<div class="flex items-center gap-space-sm">
+<a class="hidden sm:inline-flex px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-bold rounded hover:bg-primary transition-colors" href="#contato">
+          FALE COMIGO
+        </a>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container border border-outline-variant/40 hover:border-primary-container text-on-surface font-label-code text-label-code tracking-wider uppercase transition-all rounded" id="open-fullscreen-menu">
+<span class="w-1.5 h-1.5 bg-primary-container"></span>
+<span>MENU</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-background">
+<!-- 2. HERO SECTION COM PARALLAX ELEGANTE E SUTIL -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl md:py-28 border-b border-outline-variant/20" id="hero">
+<div class="pointer-events-none absolute -top-32 right-0 w-[500px] h-[500px] rounded-full bg-primary-container/10 blur-[140px]"></div>
+<div class="pointer-events-none absolute bottom-0 left-8 w-80 h-80 rounded-full bg-surface-bright/20 blur-[100px]"></div>
+<div class="w-full px-margin">
+<!-- Badge Superior de Contexto -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-low border border-outline-variant/30 px-space-md py-space-xs rounded-full mb-space-lg">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">
+            São Paulo — Brasil · Sites · Sistemas · Aplicativos · E-commerce
+          </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center min-h-[520px]">
+<!-- Bloco Tipográfico Monumental -->
+<div class="lg:col-span-6 flex flex-col z-10">
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero uppercase tracking-tighter text-on-surface mb-space-sm leading-none">
+              MOISÉS<br/>
+<span class="text-secondary-container opacity-65">CRUZ</span>
+</h1>
+<p class="font-headline-md text-headline-sm md:text-headline-md text-primary font-semibold tracking-tight mb-space-md">
+              Crio sites, sistemas e aplicativos para transformar ideias em soluções digitais.
+            </p>
+<p class="font-body-md text-body-md text-secondary max-w-lg mb-space-lg">
+              Conheça algumas das soluções que desenvolvi. Da concepção de interface à lógica operacional, construo ferramentas pensadas para resolver problemas reais de empresas e clientes.
+            </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="px-space-lg py-space-md bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-widest font-bold hover:bg-primary transition-colors flex items-center gap-space-sm rounded shadow-lg" href="#projetos">
+<span>[ VER PROJETOS ]</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="px-space-lg py-space-md bg-surface-container text-on-surface border border-outline-variant/40 font-label-code text-label-code uppercase tracking-widest hover:bg-surface-bright hover:border-primary transition-colors rounded" href="#contato">
+<span>[ FALE COMIGO ]</span>
+</a>
+</div>
+</div>
+<!-- Palco Visual Parallax Discreto (Mockup de Interface Principal) -->
+<div class="lg:col-span-6 relative w-full h-[480px] bg-surface-container-low border border-outline-variant/25 rounded-xl overflow-hidden shadow-2xl flex items-center justify-center p-space-md" id="hero-parallax-stage">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-lowest via-surface-container-low to-surface-container opacity-85"></div>
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffb59e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<!-- Camada Base da Janela de Interface -->
+<div class="hero-layer relative w-full max-w-lg bg-surface-container-high border border-outline-variant/40 rounded-lg shadow-2xl overflow-hidden transition-transform duration-100 ease-out" data-depth="0.04">
+<!-- Top bar da janela do software -->
+<div class="h-8 bg-surface-container-highest px-space-sm flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary/80"></span>
+</div>
+<span class="font-label-caps text-[10px] text-on-secondary-container tracking-wider">solucao-digital.moisescruz.com.br</span>
+<span class="font-label-caps text-[10px] text-primary">SISTEMA ATIVO</span>
+</div>
+<!-- Miolo da Interface Silog/Operações -->
+<div class="p-space-md space-y-space-sm bg-surface-container-lowest">
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20">
+<div class="space-y-0.5">
+<span class="font-label-caps text-[10px] text-primary uppercase tracking-wider">PAINEL OPERACIONAL</span>
+<h4 class="font-headline-sm text-sm text-on-surface uppercase">Gestão Integrada de Fluxos</h4>
+</div>
+<span class="px-2 py-0.5 bg-primary-container/20 text-primary-container font-label-code text-[10px] rounded">SÃO PAULO // ONLINE</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container p-2 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant block">PEDIDOS HOJE</span>
+<span class="font-headline-sm text-base text-on-surface">148</span>
+<span class="font-label-code text-[10px] text-primary">100% ATENDIDOS</span>
+</div>
+<div class="bg-surface-container p-2 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant block">OCORRÊNCIAS</span>
+<span class="font-headline-sm text-base text-on-surface">ZERO</span>
+<span class="font-label-code text-[10px] text-secondary">ESTÁVEL</span>
+</div>
+<div class="bg-surface-container p-2 rounded">
+<span class="font-label-caps text-[9px] text-on-surface-variant block">CLIENTES</span>
+<span class="font-headline-sm text-base text-on-surface">1.240</span>
+<span class="font-label-code text-[10px] text-primary">PORTAL ATIVO</span>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container rounded font-label-code text-[11px] text-secondary flex items-center justify-between">
+<span>Última atualização de pedidos em andamento</span>
+<span class="text-primary font-bold">12s atrás</span>
+</div>
+</div>
+</div>
+<!-- Card Flutuante com Profundidade Sutil -->
+<div class="hero-layer absolute -bottom-2 -left-2 bg-surface-bright/95 border border-outline-variant/50 p-space-sm rounded-lg shadow-2xl transition-transform duration-100 ease-out hidden sm:block" data-depth="0.08">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<div>
+<span class="font-label-caps text-[9px] text-primary tracking-widest block uppercase">EXPERIÊNCIA MULTIPLATAFORMA</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface">Web, Mobile e Painéis Internos</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SEÇÃO: O QUE POSSO CONSTRUIR? -->
+<section class="w-full bg-surface py-space-xl md:py-24 border-b border-outline-variant/20" id="o-que-faco">
+<div class="w-full px-margin">
+<div class="max-w-3xl mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">SOLUÇÕES PARA O SEU NEGÓCIO</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight mb-space-xs">
+            O QUE POSSO CONSTRUIR?
+          </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+            Construo ferramentas digitais sob medida que geram presença no mercado, organizam o dia a dia da empresa e aproximam clientes.
+          </p>
+</div>
+<!-- Três Grandes Blocos / Cards Sofisticados -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- CARD 1: SITES -->
+<div class="group bg-surface-container-low border border-outline-variant/30 hover:border-primary transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between hover:-translate-y-1 shadow-lg">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[22px]">language</span>
+</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">01 // PRESENÇA DIGITAL</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">
+                SITES
+              </h3>
+<p class="font-body-md text-body-md text-secondary">
+<strong class="text-on-surface font-semibold">Sua empresa na internet.</strong> Um site apresenta sua empresa, seus serviços, seus produtos e facilita que novos clientes encontrem você.
+              </p>
+<div class="p-space-sm bg-surface-container rounded border-l-2 border-primary-container">
+<span class="font-label-caps text-[9px] text-primary uppercase block">Exemplo Prático</span>
+<p class="font-body-sm text-xs text-secondary mt-1">Site institucional completo para uma empresa de serviços que deseja passar credibilidade e captar novos contatos comerciais.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-secondary uppercase">DESIGN RESPONSIVO &amp; SEO</span>
+<a class="font-label-code text-label-code text-primary hover:text-primary-container transition-colors flex items-center gap-1" href="#projetos">
+<span>Ver exemplo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: SISTEMAS -->
+<div class="group bg-surface-container-low border border-outline-variant/30 hover:border-primary transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between hover:-translate-y-1 shadow-lg">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[22px]">dns</span>
+</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">02 // ORGANIZAÇÃO</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">
+                SISTEMAS
+              </h3>
+<p class="font-body-md text-body-md text-secondary">
+<strong class="text-on-surface font-semibold">Uma ferramenta criada para resolver um problema.</strong> Sistemas podem organizar pedidos, funcionários, ocorrências, estoque, clientes, processos e muito mais.
+              </p>
+<div class="p-space-sm bg-surface-container rounded border-l-2 border-primary-container">
+<span class="font-label-caps text-[9px] text-primary uppercase block">Exemplo Prático</span>
+<p class="font-body-sm text-xs text-secondary mt-1">Sistema de gestão de ocorrências e registros para uma empresa de segurança patrimonial manter controle de ponta a ponta.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-secondary uppercase">FLUXOS &amp; BANCO DE DADOS</span>
+<a class="font-label-code text-label-code text-primary hover:text-primary-container transition-colors flex items-center gap-1" href="#projetos">
+<span>Ver exemplo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 3: APLICATIVOS -->
+<div class="group bg-surface-container-low border border-outline-variant/30 hover:border-primary transition-all duration-300 p-space-lg rounded-xl flex flex-col justify-between hover:-translate-y-1 shadow-lg">
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[22px]">smartphone</span>
+</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">03 // MOBILIDADE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase group-hover:text-primary transition-colors">
+                APLICATIVOS
+              </h3>
+<p class="font-body-md text-body-md text-secondary">
+<strong class="text-on-surface font-semibold">Uma ideia que cabe no celular.</strong> Aplicativos podem transformar um serviço, produto ou processo em uma experiência simples e direta para o usuário.
+              </p>
+<div class="p-space-sm bg-surface-container rounded border-l-2 border-primary-container">
+<span class="font-label-caps text-[9px] text-primary uppercase block">Exemplo Prático</span>
+<p class="font-body-sm text-xs text-secondary mt-1">Aplicativo móvel para solução específica de negócio, integrando equipes externas ao sistema central da empresa.</p>
+</div>
+</div>
+<div class="pt-space-lg mt-space-md border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-secondary uppercase">USABILIDADE &amp; AGILIDADE</span>
+<a class="font-label-code text-label-code text-primary hover:text-primary-container transition-colors flex items-center gap-1" href="#projetos">
+<span>Ver exemplo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SEÇÃO: PROJETOS DEMONSTRATIVOS (100% EXPLÍCITO, SEM CLIENTES FICTÍCIOS OU MÉTRICAS INVENTADAS) -->
+<section class="w-full bg-surface-container-lowest py-space-xl md:py-24 border-b border-outline-variant/20" id="projetos">
+<div class="w-full px-margin">
+<div class="max-w-3xl mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">CASES DESENVOLVIDOS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight mb-space-xs">
+            PROJETOS DEMONSTRATIVOS
+          </h2>
+<p class="font-body-lg text-body-lg text-secondary">
+            Algumas soluções que desenvolvi para explorar como diferentes problemas de negócio podem ser resolvidos através da tecnologia.
+          </p>
+</div>
+<!-- LISTA DOS 3 GRANDES PROJETOS DEMONSTRATIVOS -->
+<div class="space-y-space-xl">
+<!-- PROJETO 01: SILOG -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12">
+<!-- Coluna de Informações e Contexto -->
+<div class="lg:col-span-5 p-space-lg md:p-space-xl flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant/30">
+<div class="space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary font-label-caps text-[10px] rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  PROJETO DEMONSTRATIVO · SISTEMA DE GESTÃO
+                </div>
+<div>
+<h3 class="font-headline-lg text-headline-md text-on-surface uppercase tracking-tight">SILOG</h3>
+<p class="font-headline-sm text-base text-primary font-medium">Um sistema para organizar pedidos internos.</p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">O problema</span>
+<p class="font-body-sm text-secondary">
+                      Imagine uma empresa que recebe diversos pedidos internamente e precisa controlar quem solicitou, o que foi solicitado e em que etapa está cada pedido.
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">A ideia</span>
+<p class="font-body-sm text-secondary">
+                      Criar uma plataforma onde os pedidos possam ser registrados, acompanhados e organizados com clareza total para todas as equipes.
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-primary uppercase block mb-1">O que a solução demonstra</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">criação de pedidos</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">acompanhamento de status</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">organização das solicitações</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">painel administrativo</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-bold rounded hover:bg-primary transition-colors flex items-center justify-center gap-space-xs" href="https://silog-gamma.vercel.app/" target="_blank" rel="noopener noreferrer">
+<span>[ EXPLORAR SISTEMA ]</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Coluna de Mockup Visual Stylized Dark Interface -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md md:p-space-lg flex items-center justify-center">
+<div class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg overflow-hidden shadow-inner flex flex-col">
+<div class="h-9 bg-surface-container-high px-space-sm flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-xs text-primary font-bold">SILOG // FLUXO DE PEDIDOS</span>
+<span class="hidden sm:inline-block font-label-caps text-[9px] text-secondary">MÓDULO DE SOLICITAÇÕES</span>
+</div>
+<span class="font-label-caps text-[9px] text-on-surface bg-surface-container px-2 py-0.5 rounded">STATUS: EM OPERAÇÃO</span>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Novos Pedidos</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">12</span>
+<span class="font-label-code text-[10px] text-primary">Aguardando aprovação</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Em Separação</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">28</span>
+<span class="font-label-code text-[10px] text-secondary">Em andamento</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Concluídos</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">164</span>
+<span class="font-label-code text-[10px] text-primary">Nesta semana</span>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-sm space-y-2">
+<div class="flex justify-between items-center text-xs font-label-code text-on-surface-variant pb-1 border-b border-outline-variant/20">
+<span>Últimas Solicitações</span>
+<span>Responsável / Destino</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-xs">
+<div>
+<span class="text-primary font-semibold">#PED-4091</span>
+<span class="text-on-surface ml-2">Insumos de TI &amp; Redes</span>
+</div>
+<span class="px-2 py-0.5 bg-primary-container/20 text-primary rounded text-[10px]">APROVADO</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-xs">
+<div>
+<span class="text-primary font-semibold">#PED-4090</span>
+<span class="text-on-surface ml-2">Materiais de Escritório Central</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-variant text-secondary rounded text-[10px]">EM SEPARAÇÃO</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJETO 02: SENTINELA -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12">
+<!-- Coluna de Informações e Contexto -->
+<div class="lg:col-span-5 p-space-lg md:p-space-xl flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant/30">
+<div class="space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary font-label-caps text-[10px] rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  PROJETO DEMONSTRATIVO · SAAS / OPERAÇÕES
+                </div>
+<div>
+<h3 class="font-headline-lg text-headline-md text-on-surface uppercase tracking-tight">SENTINELA</h3>
+<p class="font-headline-sm text-base text-primary font-medium">Uma plataforma para organizar ocorrências de segurança.</p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">O problema</span>
+<p class="font-body-sm text-secondary">
+                      Empresas de segurança precisam registrar acontecimentos, acompanhar ocorrências e organizar informações operacionais sem margem para extravio.
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">A ideia</span>
+<p class="font-body-sm text-secondary">
+                      Criar uma plataforma centralizada para registrar e acompanhar essas informações com acesso controlado e histórico confiável.
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-primary uppercase block mb-1">O que a solução demonstra</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">registro de ocorrências</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">usuários e permissões</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">acompanhamento em tempo real</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">organização das informações</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">gestão operacional</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<button class="open-modal-btn w-full sm:w-auto px-space-lg py-space-sm bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-bold rounded hover:bg-primary transition-colors flex items-center justify-center gap-space-xs" data-project="sentinela">
+<span>[ EXPLORAR SENTINELA ]</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Coluna de Mockup Visual Stylized Dark Interface -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md md:p-space-lg flex items-center justify-center">
+<div class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg overflow-hidden shadow-inner flex flex-col">
+<div class="h-9 bg-surface-container-high px-space-sm flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-xs text-primary font-bold">SENTINELA // LOG DE OCORRÊNCIAS</span>
+<span class="hidden sm:inline-block font-label-caps text-[9px] text-secondary">CENTRAL DE MONITORAMENTO</span>
+</div>
+<span class="font-label-caps text-[9px] text-primary bg-primary-container/10 px-2 py-0.5 rounded">FEED EM TEMPO REAL</span>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Postos Ativos</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">24</span>
+<span class="font-label-code text-[10px] text-primary">100% monitorados</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Ocorrências Resolvidas</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">98.4%</span>
+<span class="font-label-code text-[10px] text-secondary">Mês corrente</span>
+</div>
+<div class="bg-surface-container p-2.5 rounded">
+<span class="font-label-caps text-[9px] text-secondary block uppercase">Equipe de Ronda</span>
+<span class="font-headline-sm text-lg text-on-surface font-semibold">18</span>
+<span class="font-label-code text-[10px] text-primary">Em comunicação</span>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-sm space-y-2">
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-xs">
+<div>
+<span class="text-primary font-bold">[POSTO 04 - PORTARIA SUL]</span>
+<span class="text-on-surface ml-1">Verificação de perímetro sem alterações</span>
+</div>
+<span class="text-secondary text-[10px]">10 min atrás</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded font-label-code text-xs">
+<div>
+<span class="text-primary-container font-bold">[POSTO 01 - CONTROLE]</span>
+<span class="text-on-surface ml-1">Acesso de terceiros autorizado e registrado</span>
+</div>
+<span class="text-secondary text-[10px]">32 min atrás</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- PROJETO 03: SUPER MIX -->
+<div class="bg-surface-container-low border border-outline-variant/30 rounded-xl overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12">
+<!-- Coluna de Informações e Contexto -->
+<div class="lg:col-span-5 p-space-lg md:p-space-xl flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant/30">
+<div class="space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-high text-primary font-label-caps text-[10px] rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  PROJETO DEMONSTRATIVO · E-COMMERCE
+                </div>
+<div>
+<h3 class="font-headline-lg text-headline-md text-on-surface uppercase tracking-tight">SUPER MIX</h3>
+<p class="font-headline-sm text-base text-primary font-medium">Uma experiência de supermercado online.</p>
+</div>
+<div class="space-y-space-sm pt-space-xs">
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">O problema</span>
+<p class="font-body-sm text-secondary">
+                      Como uma empresa comercial poderia apresentar seus produtos e permitir que seus clientes realizassem pedidos pela internet com conveniência e facilidade?
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block mb-1">A ideia</span>
+<p class="font-body-sm text-secondary">
+                      Criar uma loja virtual fluida com catálogo categorizado, carrinho dinâmico e gerenciamento claro dos pedidos recebidos.
+                    </p>
+</div>
+<div>
+<span class="font-label-caps text-[10px] text-primary uppercase block mb-1">O que a solução demonstra</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">catálogo de produtos</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">categorias</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">carrinho de compras</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">fluxo de pedidos</span>
+<span class="px-2 py-0.5 bg-surface-container font-label-code text-[11px] text-on-surface rounded">área administrativa</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="w-full sm:w-auto px-space-lg py-space-sm bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-bold rounded hover:bg-primary transition-colors flex items-center justify-center gap-space-xs" href="https://supermix-ten.vercel.app/" target="_blank" rel="noopener noreferrer">
+<span>[ EXPLORAR SUPER MIX ]</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Coluna de Mockup Visual Stylized Dark Interface -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-md md:p-space-lg flex items-center justify-center">
+<div class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg overflow-hidden shadow-inner flex flex-col">
+<div class="h-9 bg-surface-container-high px-space-sm flex items-center justify-between border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="font-label-code text-xs text-primary font-bold">SUPER MIX // LOJA ONLINE</span>
+<span class="hidden sm:inline-block font-label-caps text-[9px] text-secondary">CATÁLOGO &amp; CHECKOUT</span>
+</div>
+<span class="font-label-caps text-[9px] text-primary-container bg-primary-container/10 px-2 py-0.5 rounded">CARRINHO: 3 ITENS</span>
+</div>
+<div class="p-space-md space-y-space-sm">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<div class="bg-surface-container p-2 rounded">
+<div class="h-14 bg-surface-container-lowest rounded mb-2 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">shopping_basket</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary block">HORTIFRUTI</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block">Cesta Selecionada</span>
+<span class="font-label-code text-[10px] text-primary font-bold">R$ 48,90</span>
+</div>
+<div class="bg-surface-container p-2 rounded">
+<div class="h-14 bg-surface-container-lowest rounded mb-2 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">local_cafe</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary block">BEBIDAS &amp; GRÃOS</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block">Café Gourmet 500g</span>
+<span class="font-label-code text-[10px] text-primary font-bold">R$ 26,50</span>
+</div>
+<div class="bg-surface-container p-2 rounded col-span-2 sm:col-span-1">
+<div class="h-14 bg-surface-container-lowest rounded mb-2 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">inventory_2</span>
+</div>
+<span class="font-label-caps text-[9px] text-secondary block">PADARIA</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block">Pães Especiais</span>
+<span class="font-label-code text-[10px] text-primary font-bold">R$ 19,00</span>
+</div>
+</div>
+<div class="bg-surface-container rounded p-space-sm flex items-center justify-between text-xs font-label-code">
+<span class="text-secondary">Simulação de compra rápida integrada</span>
+<span class="text-primary font-bold">Checkout Simples</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- GRID SÍNTESE COMPARATIVO ELEGANTE -->
+<div class="mt-space-xl pt-space-xl border-t border-outline-variant/30">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase block">VISÃO GERAL DO ECOSSISTEMA</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase">COMPATIBILIDADE DE SOLUÇÕES</h3>
+</div>
+<span class="font-label-code text-label-code text-secondary hidden sm:inline-block">5 CATEGORIAS DE DESENVOLVIMENTO</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-sm">
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-sm rounded-lg">
+<span class="font-label-caps text-[9px] text-primary-container block">SILOG</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block mt-1">Sistema de gestão</span>
+<span class="font-label-code text-[10px] text-secondary mt-1 block">Fluxos internos &amp; pedidos</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-sm rounded-lg">
+<span class="font-label-caps text-[9px] text-primary block">SENTINELA</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block mt-1">SaaS / operações</span>
+<span class="font-label-code text-[10px] text-secondary mt-1 block">Ocorrências &amp; equipes</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-sm rounded-lg">
+<span class="font-label-caps text-[9px] text-primary-container block">SUPER MIX</span>
+<span class="font-body-sm text-xs font-semibold text-on-surface block mt-1">E-commerce</span>
+<span class="font-label-code text-[10px] text-secondary mt-1 block">Catálogo &amp; vendas online</span>
+</div></div>
+</div>
+</div>
+</section>
+<!-- 5. SEÇÃO: FILOSOFIA: "NÃO É SÓ SOBRE TECNOLOGIA." -->
+<section class="w-full bg-surface-dim py-space-xl md:py-28 border-b border-outline-variant/20" id="filosofia">
+<div class="w-full px-margin">
+<div class="max-w-4xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">MÉTODO &amp; VISÃO DE NEGÓCIO</span>
+</div>
+<h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg uppercase tracking-tighter text-on-surface mb-space-md">
+            NÃO É SÓ SOBRE TECNOLOGIA.
+          </h2>
+<p class="font-headline-md text-headline-sm md:text-headline-md text-secondary font-medium mb-space-xl">
+            Antes de pensar em tecnologia, existe um problema para resolver.
+          </p>
+<!-- 4 Blocos de Perguntas e Respostas Objetivas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-space-xl">
+<!-- Bloco 1 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/30 rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<h4 class="font-headline-sm text-base text-on-surface font-semibold">Você precisa de um site?</h4>
+</div>
+<p class="font-body-md text-secondary pl-7">
+                Nós podemos criar. Desenvolvemos páginas que comunicam a proposta da sua empresa de maneira direta, estética e com carregamento instantâneo.
+              </p>
+</div>
+<!-- Bloco 2 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/30 rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<h4 class="font-headline-sm text-base text-on-surface font-semibold">Você precisa organizar um processo?</h4>
+</div>
+<p class="font-body-md text-secondary pl-7">
+                Podemos transformar isso em um sistema. Eliminamos planilhas soltas e gargalos criando fluxos centralizados para a sua operação.
+              </p>
+</div>
+<!-- Bloco 3 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/30 rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<h4 class="font-headline-sm text-base text-on-surface font-semibold">Você tem uma ideia de aplicativo?</h4>
+</div>
+<p class="font-body-md text-secondary pl-7">
+                Podemos transformar a ideia em um protótipo ou produto navegável, validando o conceito na prática com foco nos usuários.
+              </p>
+</div>
+<!-- Bloco 4 -->
+<div class="p-space-lg bg-surface-container-low border border-outline-variant/30 rounded-xl space-y-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<h4 class="font-headline-sm text-base text-on-surface font-semibold">Você vende produtos?</h4>
+</div>
+<p class="font-body-md text-secondary pl-7">
+                Podemos criar uma experiência de venda online completa, do catálogo de itens ao fechamento de pedidos sem fricção.
+              </p>
+</div>
+</div>
+<!-- Fechamento em Destaque Monumental -->
+<div class="p-space-lg bg-surface-container border-l-4 border-primary-container rounded-r-xl">
+<p class="font-display-hero text-headline-sm md:text-headline-md text-on-surface uppercase tracking-tight font-bold">
+              “A tecnologia é o meio. O objetivo é resolver o problema.”
+            </p>
+<span class="font-label-code text-label-code text-primary uppercase mt-2 block tracking-widest">
+              — DIRETRIZ FUNDAMENTAL DE DESENVOLVIMENTO
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SEÇÃO: SOBRE MOISÉS -->
+<section class="w-full bg-surface-container-lowest py-space-xl md:py-28 border-b border-outline-variant/20" id="sobre">
+<div class="w-full px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Retrato Minimalista Estilizado em Alto Contraste -->
+<div class="lg:col-span-5">
+<div class="relative w-full max-w-md mx-auto aspect-[4/5] bg-surface-container border border-outline-variant/40 rounded-xl overflow-hidden shadow-2xl flex flex-col justify-between p-space-lg">
+<div class="flex justify-between items-start z-10">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">REGISTRO AUTORAL</span>
+<span class="font-label-code text-label-code text-secondary">SP // BR</span>
+</div>
+<!-- Composição Visual de Retrato / Monograma -->
+<div class="my-auto text-center z-10">
+<div class="w-24 h-24 mx-auto rounded-full bg-surface-container-high border-2 border-primary-container/40 flex items-center justify-center mb-space-md">
+<span class="font-display-hero text-3xl font-extrabold text-primary">MC</span>
+</div>
+<h3 class="font-headline-sm text-xl text-on-surface uppercase font-bold tracking-tight">MOISÉS CRUZ</h3>
+<p class="font-label-code text-xs text-secondary mt-1 uppercase">DESENVOLVEDOR · CRIADOR · AUTOR</p>
+</div>
+<div class="z-10 pt-space-sm border-t border-outline-variant/30 flex justify-between items-center text-xs font-label-code text-secondary">
+<span>LOCAL: SÃO PAULO, SP</span>
+<span class="text-primary font-semibold">ATIVO</span>
+</div>
+</div>
+</div>
+<!-- Conteúdo Biográfico Fiel -->
+<div class="lg:col-span-7 space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">TRAJETÓRIA &amp; IDENTIDADE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight">
+                SOBRE MOISÉS
+              </h2>
+<p class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">
+                São Paulo, SP — Desenvolvedor · Criador · Autor
+              </p>
+</div>
+<!-- Texto verbatim solicitado -->
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              Sou Moisés Cruz, desenvolvedor e criador de soluções digitais, de São Paulo. Gosto de transformar ideias em projetos que possam ser usados, testados e aprimorados.
+            </p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Além de desenvolvimento de software, tenho experiência profissional em operações, processos, gestão e melhoria contínua. Também sou autor de livros e mantenho projetos próprios para aprender, experimentar e criar novas soluções.
+            </p>
+<div class="pt-space-sm grid grid-cols-1 sm:grid-cols-3 gap-space-sm font-label-code text-xs">
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<span class="text-primary block font-bold">DESENVOLVIMENTO</span>
+<span class="text-secondary">Sites, Apps &amp; Softwares</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<span class="text-primary block font-bold">OPERAÇÕES</span>
+<span class="text-secondary">Processos &amp; Governança</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded border border-outline-variant/20">
+<span class="text-primary block font-bold">AUTORAL</span>
+<span class="text-secondary">Livros &amp; Pesquisa Prática</span>
+</div>
+</div>
+<div class="pt-space-md flex gap-space-md">
+<a class="px-space-md py-space-sm bg-surface-container hover:bg-surface-bright text-on-surface font-label-code text-label-code uppercase tracking-wider rounded border border-outline-variant/30 transition-colors" href="#livros">
+                [ VER LIVROS PUBLICADOS ]
+              </a>
+<a class="px-space-md py-space-sm bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-wider font-bold rounded hover:bg-primary transition-colors" href="#contato">
+                [ CONVERSAR COMIGO ]
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. SEÇÃO: ESTUDIO DIGITAL -->
+<section class="w-full bg-surface-dim py-space-xl md:py-20 border-b border-outline-variant/20" id="studio">
+<div class="w-full px-margin">
+<div class="bg-surface-container-high border border-outline-variant/40 rounded-2xl p-space-lg md:p-space-xl shadow-2xl flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl relative overflow-hidden">
+<div class="pointer-events-none absolute -right-16 -bottom-16 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl"></div>
+<div class="max-w-2xl z-10">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2.5 h-2.5 bg-primary-container rounded-sm"></span>
+<span class="font-label-caps text-label-caps tracking-widest text-primary uppercase">ESTÚDIO DE CRIAÇÃO E TECNOLOGIA</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight mb-space-xs">
+              ESTUDIO DIGITAL
+            </h3>
+<p class="font-body-lg text-body-lg text-secondary mb-space-lg">
+              A Estudio Digital é o estúdio criado por Moisés Cruz para desenvolver soluções digitais para empresas e empreendedores.
+            </p>
+<div class="flex flex-wrap gap-space-xs font-label-caps text-label-caps text-on-surface">
+<span class="bg-surface-container border border-outline-variant/30 px-space-md py-space-xs rounded uppercase">Sites</span>
+<span class="bg-surface-container border border-outline-variant/30 px-space-md py-space-xs rounded uppercase">Sistemas</span>
+<span class="bg-surface-container border border-outline-variant/30 px-space-md py-space-xs rounded uppercase">E-commerce</span>
+<span class="bg-surface-container border border-outline-variant/30 px-space-md py-space-xs rounded uppercase">Aplicativos</span>
+<span class="bg-surface-container border border-outline-variant/30 px-space-md py-space-xs rounded uppercase">Soluções personalizadas</span>
+</div>
+</div>
+<div class="z-10 flex flex-col sm:flex-row items-start sm:items-center gap-space-md">
+<a class="px-space-xl py-space-md bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-widest font-bold rounded-lg shadow-xl hover:bg-primary transition-all flex items-center gap-space-xs group" href="#contato">
+<span>[ CONHEÇA A ESTUDIO DIGITAL → ]</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. SEÇÃO: ALÉM DA TECNOLOGIA (LIVROS) -->
+<section class="w-full bg-surface-container-lowest py-space-xl md:py-28 border-b border-outline-variant/20" id="livros">
+<div class="w-full px-margin">
+<div class="max-w-3xl mb-space-xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">PUBLICAÇÕES &amp; ENSAIOS AUTORAIS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight mb-space-xs">
+            ALÉM DA TECNOLOGIA
+          </h2>
+<p class="font-headline-sm text-headline-sm text-secondary">
+            Também transformo ideias em conhecimento.
+          </p>
+</div>
+<!-- 3 Cards Refinados dos Livros -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Livro 1: A Lógica da Ação -->
+<div class="book-card group bg-surface-container-low border border-outline-variant/30 hover:border-primary p-space-lg rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between" data-book="logica">
+<div class="space-y-space-md">
+<div class="w-full h-64 bg-surface-container rounded-lg p-space-md flex flex-col justify-between border border-outline-variant/20 relative overflow-hidden group-hover:border-primary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">VOLUME 01</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface uppercase leading-tight">A LÓGICA DA AÇÃO</h3>
+<p class="font-label-code text-[11px] text-primary mt-1 uppercase">EXECUÇÃO &amp; FOCO</p>
+</div>
+<div class="flex justify-between items-center text-[10px] font-label-caps text-secondary pt-2 border-t border-outline-variant/20">
+<span>MOISÉS CRUZ</span>
+<span class="text-on-surface font-semibold">[ PRÉVIA ]</span>
+</div>
+</div>
+<p class="font-body-sm text-secondary">
+                Arquitetura mental, psicologia da ação e tomada de decisão sob pressão operacional.
+              </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-code text-primary">
+<span>VER DETALHES</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Livro 2: Construindo Sistemas Silenciosos -->
+<div class="book-card group bg-surface-container-low border border-outline-variant/30 hover:border-primary p-space-lg rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between" data-book="sistemas">
+<div class="space-y-space-md">
+<div class="w-full h-64 bg-surface-container rounded-lg p-space-md flex flex-col justify-between border border-outline-variant/20 relative overflow-hidden group-hover:border-primary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">VOLUME 02</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface uppercase leading-tight">CONSTRUINDO SISTEMAS SILENCIOSOS</h3>
+<p class="font-label-code text-[11px] text-primary mt-1 uppercase">SOFTWARE PRAGMÁTICO</p>
+</div>
+<div class="flex justify-between items-center text-[10px] font-label-caps text-secondary pt-2 border-t border-outline-variant/20">
+<span>MOISÉS CRUZ</span>
+<span class="text-on-surface font-semibold">[ PRÉVIA ]</span>
+</div>
+</div>
+<p class="font-body-sm text-secondary">
+                Princípios pragmáticos de confiabilidade, ausência de alertas fúteis e engenharia de software sem exaustão.
+              </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-code text-primary">
+<span>VER DETALHES</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Livro 3: Do Quartel ao Código -->
+<div class="book-card group bg-surface-container-low border border-outline-variant/30 hover:border-primary p-space-lg rounded-xl shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col justify-between" data-book="quartel">
+<div class="space-y-space-md">
+<div class="w-full h-64 bg-surface-container rounded-lg p-space-md flex flex-col justify-between border border-outline-variant/20 relative overflow-hidden group-hover:border-primary transition-colors">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">VOLUME 03</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-xl text-on-surface uppercase leading-tight">DO QUARTEL AO CÓDIGO</h3>
+<p class="font-label-code text-[11px] text-primary mt-1 uppercase">MEMÓRIAS &amp; TRANSIÇÃO</p>
+</div>
+<div class="flex justify-between items-center text-[10px] font-label-caps text-secondary pt-2 border-t border-outline-variant/20">
+<span>MOISÉS CRUZ</span>
+<span class="text-on-surface font-semibold">[ PRÉVIA ]</span>
+</div>
+</div>
+<p class="font-body-sm text-secondary">
+                Memórias, disciplina operacional e a transição do ambiente tático militar para o desenvolvimento de software de alta performance.
+              </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex items-center justify-between text-xs font-label-code text-primary">
+<span>VER DETALHES</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. SEÇÃO: TEM UMA IDEIA? (CONTATO DIRETO E MODERNO) -->
+<section class="w-full bg-surface py-space-xl md:py-28" id="contato">
+<div class="w-full px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5 space-y-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">CANAL DIRETO DE CONTATO</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-tight mb-space-xs">
+                TEM UMA IDEIA?
+              </h2>
+<p class="font-headline-sm text-headline-sm text-secondary font-medium">
+                Talvez ela possa virar um projeto. Conte o que você está pensando.
+              </p>
+</div>
+<p class="font-body-md text-secondary">
+              Seja para um novo site, a automação de um fluxo interno da sua empresa ou a criação de um produto digital próprio, vamos analisar juntos o melhor caminho.
+            </p>
+<div class="space-y-space-xs font-label-code text-label-code text-secondary pt-space-sm">
+<div class="p-space-sm bg-surface-container rounded flex justify-between items-center">
+<span class="text-on-surface-variant uppercase">LOCALIZAÇÃO</span>
+<span class="text-on-surface">São Paulo, SP — Brasil</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex justify-between items-center">
+<span class="text-on-surface-variant uppercase">RESPOSTA</span>
+<span class="text-primary font-bold">Em até 24 horas</span>
+</div>
+<div class="p-space-sm bg-surface-container rounded flex justify-between items-center">
+<span class="text-on-surface-variant uppercase">ESTÚDIO</span>
+<span class="text-on-surface">Estudio Digital</span>
+</div>
+</div>
+</div>
+<!-- Formulário Moderno e Direto -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-low border border-outline-variant/30 p-space-lg md:p-space-xl rounded-2xl shadow-xl">
+<form class="space-y-space-md" id="contact-idea-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-caps text-[10px] text-on-surface-variant uppercase">Nome ou Organização</label>
+<input name="name" class="w-full bg-surface-container text-on-surface font-body-sm p-space-sm rounded border border-outline-variant/30 outline-none focus:border-primary-container transition-colors" placeholder="Seu nome ou sua empresa" required type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-[10px] text-on-surface-variant uppercase">Email para Contato</label>
+<input name="email" class="w-full bg-surface-container text-on-surface font-body-sm p-space-sm rounded border border-outline-variant/30 outline-none focus:border-primary-container transition-colors" placeholder="seuemail@dominio.com" required type="email"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-[10px] text-on-surface-variant uppercase">Tipo de Solução Desejada</label>
+<select name="type" class="w-full bg-surface-container text-on-surface font-body-sm p-space-sm rounded border border-outline-variant/30 outline-none focus:border-primary-container transition-colors">
+<option value="site">Site Institucional / Landing Page</option>
+<option value="sistema">Sistema de Gestão / Plataforma Interna</option>
+<option value="app">Aplicativo Móvel</option>
+<option value="ecommerce">Loja Virtual / E-commerce</option>
+<option value="outro">Outra Solução Personalizada</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-[10px] text-on-surface-variant uppercase">Descrição da Ideia ou Problema a Resolver</label>
+<textarea name="message" class="w-full bg-surface-container text-on-surface font-body-sm p-space-sm rounded border border-outline-variant/30 outline-none focus:border-primary-container transition-colors" placeholder="Conte brevemente sobre sua necessidade, expectativas ou contexto do seu negócio..." required rows="4"></textarea>
+</div>
+<button id="contact-submit-btn" class="w-full py-space-md bg-primary-container text-on-primary-container font-label-code text-label-code uppercase tracking-widest font-bold rounded-lg hover:bg-primary transition-colors flex items-center justify-center gap-space-sm shadow-lg" type="submit">
+<span id="contact-submit-text">[ ENVIAR PROPOSTA / INICIAR CONVERSA ]</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER CONCEITUAL -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 py-space-xl">
+<div class="w-full px-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-xl">
+<div class="md:col-span-5">
+<span class="font-headline-md text-headline-md text-on-surface block mb-space-xs tracking-tight uppercase">MOISÉS CRUZ</span>
+<p class="font-body-md text-secondary max-w-md">Desenvolvimento de sites, sistemas e aplicativos com clareza, estética brutalista e foco em soluções reais.</p>
+</div>
+<div class="md:col-span-3">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-space-md uppercase">MAPA DO SITE</span>
+<ul class="space-y-space-sm font-label-code text-label-code text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#o-que-faco">O QUE FAÇO</a></li>
+<li><a class="hover:text-primary transition-colors" href="#projetos">PROJETOS DEMONSTRATIVOS</a></li>
+<li><a class="hover:text-primary transition-colors" href="#filosofia">FILOSOFIA &amp; MÉTODO</a></li>
+<li><a class="hover:text-primary transition-colors" href="#sobre">SOBRE MOISÉS</a></li>
+<li><a class="hover:text-primary transition-colors" href="#livros">LIVROS &amp; ENSAIOS</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col justify-between">
+<div class="p-space-md bg-surface-container-low border border-outline-variant/30 rounded-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-caps text-label-caps text-primary uppercase">ATENDIMENTO</span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Projetos em São Paulo e atendimento remoto para todo o país.</p>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md font-label-code text-label-code text-secondary">
+<div class="flex items-center gap-space-md">
+<span>© 2026 MOISÉS CRUZ</span>
+<span class="text-outline-variant">•</span>
+<span>SÃO PAULO, BRASIL</span>
+</div>
+<div class="flex items-center gap-space-md">
+<a class="hover:text-primary transition-colors" href="#studio">ESTUDIO DIGITAL</a>
+<span>•</span>
+<a class="hover:text-primary transition-colors" href="#contato">CONTATO</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- MODAL DE PROJETO DEMONSTRATIVO -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-space-md" id="project-detail-modal">
+<div class="relative w-full max-w-2xl bg-surface-container border border-outline-variant/40 rounded-xl shadow-2xl p-space-lg overflow-hidden max-h-[90vh] flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-outline-variant/20">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase" id="modal-project-badge">PROJETO DEMONSTRATIVO</span>
+</div>
+<button class="font-label-code text-label-code text-on-surface hover:text-primary transition-colors uppercase" id="close-project-modal">[ FECHAR × ]</button>
+</div>
+<div class="overflow-y-auto pr-space-xs space-y-space-md">
+<h3 class="font-headline-lg text-headline-md text-on-surface uppercase tracking-tight" id="modal-project-name">NOME DO PROJETO</h3>
+<p class="font-body-md text-body-md text-primary font-medium" id="modal-project-subtitle">Subtítulo</p>
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-2 border border-outline-variant/20">
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase block">Contexto &amp; Problema Resolvido</span>
+<p class="font-body-sm text-secondary" id="modal-project-details">Detalhes do projeto e de que forma a arquitetura resolveu o desafio.</p>
+</div>
+<div class="space-y-1">
+<span class="font-label-caps text-[10px] text-primary uppercase block">Capacidades Demonstradas</span>
+<ul class="list-disc list-inside font-body-sm text-secondary space-y-1" id="modal-project-features">
+<li>Item 1</li>
+</ul>
+</div>
+</div>
+<div class="pt-space-md mt-space-md border-t border-outline-variant/20 flex justify-end">
+<button class="px-space-md py-space-xs bg-primary-container text-on-primary-container font-label-code text-label-code uppercase rounded font-bold hover:bg-primary transition-colors" id="close-project-modal-bottom">
+          FECHAR VISUALIZAÇÃO
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL DE LIVROS -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-space-md" id="book-modal">
+<div class="relative w-full max-w-xl bg-surface-container border border-outline-variant/40 rounded-xl shadow-2xl p-space-lg overflow-hidden flex flex-col">
+<div class="flex items-center justify-between pb-space-sm mb-space-md border-b border-outline-variant/20">
+<span class="font-label-caps text-label-caps text-primary uppercase">PUBLICAÇÃO AUTORAL</span>
+<button class="font-label-code text-label-code text-on-surface hover:text-primary transition-colors uppercase" id="close-book-modal">[ FECHAR × ]</button>
+</div>
+<div class="space-y-space-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface uppercase" id="modal-book-name">TÍTULO</h3>
+<p class="font-label-code text-xs text-primary uppercase" id="modal-book-author">MOISÉS CRUZ — AUTOR</p>
+<p class="font-body-md text-secondary" id="modal-book-desc">Sinopse da publicação.</p>
+<div class="p-space-sm bg-surface-container-low rounded text-xs font-label-code text-on-surface-variant">
+          Disponível para leitura e discussão com a comunidade de tecnologia e negócios.
+        </div>
+</div>
+</div>
+</div>
+<!-- CLIENT-SIDE INTERACTIVITY SCRIPT -->
+<script>
+    // 1. Mouse Parallax no Hero (Suave e Discreto)
+    const heroStage = document.getElementById('hero-parallax-stage');
+    if (heroStage) {
+      const layers = heroStage.querySelectorAll('.hero-layer');
+      heroStage.addEventListener('mousemove', (e) => {
+        const rect = heroStage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) - rect.width / 2;
+        const y = (e.clientY - rect.top) - rect.height / 2;
+        layers.forEach(layer => {
+          const depth = parseFloat(layer.getAttribute('data-depth')) || 0.04;
+          layer.style.transform = `translate(${-(x * depth)}px, ${-(y * depth)}px)`;
+        });
+      });
+      heroStage.addEventListener('mouseleave', () => {
+        layers.forEach(layer => {
+          layer.style.transform = 'translate(0px, 0px)';
+        });
+      });
+    }
+
+    // 2. Custom Cursor
+    const dot = document.getElementById('custom-cursor-dot');
+    const ring = document.getElementById('custom-cursor-ring');
+    if (dot && ring) {
+      window.addEventListener('mousemove', (e) => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+        ring.style.left = e.clientX + 'px';
+        ring.style.top = e.clientY + 'px';
+      });
+      document.querySelectorAll('a, button, input, select, textarea, .cursor-pointer').forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+    }
+
+    // 3. Fullscreen Menu Toggle
+    const menuOverlay = document.getElementById('editorial-fullscreen-menu');
+    const openMenuBtn = document.getElementById('open-fullscreen-menu');
+    const closeMenuBtn = document.getElementById('close-fullscreen-menu');
+    if (openMenuBtn && menuOverlay && closeMenuBtn) {
+      openMenuBtn.addEventListener('click', () => {
+        menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        menuOverlay.classList.add('opacity-100', 'pointer-events-auto');
+      });
+      closeMenuBtn.addEventListener('click', () => {
+        menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+        menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+      });
+      menuOverlay.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+          menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+        });
+      });
+    }
+
+    // 4. Modal de Projetos Demonstrativos
+    const projectModalData = {
+      silog: {
+        badge: 'PROJETO DEMONSTRATIVO · SISTEMA DE GESTÃO',
+        title: 'SILOG — Sistema de Gestão de Pedidos Internos',
+        subtitle: 'Um sistema para organizar pedidos internos.',
+        details: 'Desenvolvido para empresas que recebem múltiplos pedidos e requisições diárias de diferentes setores. O sistema garante rastreabilidade do solicitante, aprovações, etapas de separação e entrega.',
+        features: [
+          'Criação rápida de solicitações com campos obrigatórios e anexos.',
+          'Acompanhamento de status em tempo real (Aprovado, Em Separação, Concluído).',
+          'Organização unificada das solicitações por centro de custo e setor.',
+          'Painel administrativo para controle e emissão de relatórios operacionais.'
+        ]
+      },
+      sentinela: {
+        badge: 'PROJETO DEMONSTRATIVO · SAAS / OPERAÇÕES',
+        title: 'SENTINELA — Plataforma de Ocorrências de Segurança',
+        subtitle: 'Uma plataforma para organizar ocorrências de segurança.',
+        details: 'Criado para atender à rotina crítica de empresas e postos de segurança patrimonial, unificando registros de incidentes e permitindo auditoria pontual sem perda de dados.',
+        features: [
+          'Registro detalhado de ocorrências com horário, local e envolvidos.',
+          'Gestão de usuários, rondas e perfis com níveis estritos de permissão.',
+          'Feed de acompanhamento e telemetria de status em tempo real.',
+          'Histórico inviolável para auditorias e gestão operacional contínua.'
+        ]
+      },
+      supermix: {
+        badge: 'PROJETO DEMONSTRATIVO · E-COMMERCE',
+        title: 'SUPER MIX — Supermercado & E-commerce Online',
+        subtitle: 'Uma experiência de supermercado online.',
+        details: 'Construído para viabilizar que estabelecimentos comerciais apresentem seus produtos de forma intuitiva, permitindo que clientes façam compras em poucos cliques com cálculo de entrega ágil.',
+        features: [
+          'Catálogo de produtos com fotos, especificações e estoque atualizado.',
+          'Navegação por categorias e busca preditiva instantânea.',
+          'Carrinho de compras dinâmico com persistência de itens.',
+          'Fluxo de checkout e painel administrativo para gerenciamento dos pedidos.'
+        ]
+      }
+    };
+
+    const projectModal = document.getElementById('project-detail-modal');
+    const closeProjBtn = document.getElementById('close-project-modal');
+    const closeProjBottomBtn = document.getElementById('close-project-modal-bottom');
+
+    document.querySelectorAll('.open-modal-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-project');
+        const data = projectModalData[key];
+        if (data && projectModal) {
+          document.getElementById('modal-project-badge').textContent = data.badge;
+          document.getElementById('modal-project-name').textContent = data.title;
+          document.getElementById('modal-project-subtitle').textContent = data.subtitle;
+          document.getElementById('modal-project-details').textContent = data.details;
+
+          const ul = document.getElementById('modal-project-features');
+          ul.innerHTML = '';
+          data.features.forEach(f => {
+            const li = document.createElement('li');
+            li.textContent = f;
+            ul.appendChild(li);
+          });
+
+          projectModal.classList.remove('opacity-0', 'pointer-events-none');
+          projectModal.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      });
+    });
+
+    [closeProjBtn, closeProjBottomBtn].forEach(el => {
+      if (el) {
+        el.addEventListener('click', () => {
+          projectModal.classList.remove('opacity-100', 'pointer-events-auto');
+          projectModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+      }
+    });
+
+    // 5. Modal de Livros
+    const bookModalData = {
+      logica: {
+        title: 'A LÓGICA DA AÇÃO',
+        desc: 'Uma investigação objetiva sobre a eliminação da inércia, psicologia da ação sob atrito e a tomada de decisões pragmáticas em contextos de alta exigência.'
+      },
+      sistemas: {
+        title: 'CONSTRUINDO SISTEMAS SILENCIOSOS',
+        desc: 'Princípios fundamentais de engenharia para criar softwares que operam sem alarme contínuo, focando em estabilidade matemática, manutenção descomplicada e redução de estresse da equipe.'
+      },
+      quartel: {
+        title: 'DO QUARTEL AO CÓDIGO',
+        desc: 'Relato biográfico sobre como os aprendizados de conduta, hierarquia operacional e resiliência adquiridos nas Forças Armadas moldaram a mentalidade na construção de softwares comerciais.'
+      }
+    };
+
+    const bookModal = document.getElementById('book-modal');
+    const closeBookBtn = document.getElementById('close-book-modal');
+
+    document.querySelectorAll('.book-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-book');
+        const data = bookModalData[key];
+        if (data && bookModal) {
+          document.getElementById('modal-book-name').textContent = data.title;
+          document.getElementById('modal-book-desc').textContent = data.desc;
+          bookModal.classList.remove('opacity-0', 'pointer-events-none');
+          bookModal.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      });
+    });
+
+    if (closeBookBtn && bookModal) {
+      closeBookBtn.addEventListener('click', () => {
+        bookModal.classList.remove('opacity-100', 'pointer-events-auto');
+        bookModal.classList.add('opacity-0', 'pointer-events-none');
+      });
+    }
+
+    // Fechar modais com tecla ESC
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        [projectModal, bookModal, menuOverlay].forEach(m => {
+          if (m) {
+            m.classList.remove('opacity-100', 'pointer-events-auto');
+            m.classList.add('opacity-0', 'pointer-events-none');
+          }
+        });
+      }
+    });
+
+    // 6. Formulário de contato → API serverless (Telegram)
+    const contactForm = document.getElementById('contact-idea-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const btn = document.getElementById('contact-submit-btn');
+        const btnText = document.getElementById('contact-submit-text');
+        const originalText = btnText.textContent;
+
+        btn.disabled = true;
+        btnText.textContent = '[ ENVIANDO... ]';
+        btn.classList.add('opacity-70', 'cursor-not-allowed');
+
+        const formData = new FormData(contactForm);
+        const payload = {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          type: formData.get('type'),
+          message: formData.get('message')
+        };
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const data = await res.json();
+
+          if (res.ok && data.success) {
+            alert('Mensagem enviada com sucesso! Moisés Cruz retornará em breve.');
+            contactForm.reset();
+          } else {
+            alert(data.error || 'Não foi possível enviar a mensagem. Tente novamente.');
+          }
+        } catch (err) {
+          console.error(err);
+          alert('Erro de conexão. Verifique sua internet e tente novamente.');
+        } finally {
+          btn.disabled = false;
+          btnText.textContent = originalText;
+          btn.classList.remove('opacity-70', 'cursor-not-allowed');
+        }
+      });
+    }
+  </script>
+</body></html>
